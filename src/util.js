@@ -12,7 +12,15 @@ const generatePaths = path => {
         return false;
       }
     })
-    .map(path);
+    .map(path)
+    .filter(p => {
+      try {
+        require(p);
+        return true;
+      } catch {
+        return false;
+      }
+    });
 };
 
 const resolveParser = () => {

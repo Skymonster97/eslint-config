@@ -1,8 +1,9 @@
 "use strict";
 
+const { join } = require("path");
 const { generatePaths, resolveParser } = require("./src/util.js");
 
-const optional = generatePaths(name => `./rules/${name}.js`);
+const optional = generatePaths(name => join(__dirname, `rules/${name}.js`));
 
 module.exports = {
   "parser": resolveParser(),
