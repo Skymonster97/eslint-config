@@ -2,35 +2,27 @@
 
 const pluginsNames = require("./plugins.js");
 
+const moduleExists = arg => {
+  try {
+    require(arg);
+    return true;
+  } catch {
+    return false;
+  }
+};
+
 const generatePaths = path => {
   return pluginsNames
-    .filter(name => {
-      try {
-        require(`eslint-plugin-${name}`);
-        return true;
-      } catch {
-        return false;
-      }
-    })
+    .filter(name => moduleExists(`eslint-plugin-${name}`))
     .map(path)
-    .filter(p => {
-      try {
-        require(p);
-        return true;
-      } catch {
-        return false;
-      }
-    });
+    .filter(moduleExists);
 };
 
 const resolveParser = () => {
-  let parser;
+  let parser = "esprima";
 
-  try {
-    require("babel-eslint");
+  if (moduleExists("babel-eslint")) {
     parser = "babel-eslint";
-  } catch {
-    parser = "esprima";
   }
 
   return parser;
