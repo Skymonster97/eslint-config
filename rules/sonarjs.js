@@ -4,7 +4,7 @@ const rules = {
   "sonarjs/cognitive-complexity": "off",
   "sonarjs/max-switch-cases": "off",
   "sonarjs/no-all-duplicated-branches": "error",
-  "sonarjs/no-collapsible-if": "error",
+  "sonarjs/no-collapsible-if": "warn",
   "sonarjs/no-collection-size-mischeck": "error",
   "sonarjs/no-duplicate-string": "off",
   "sonarjs/no-duplicated-branches": "error",

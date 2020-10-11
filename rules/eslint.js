@@ -1,6 +1,7 @@
 "use strict";
 
 const rules = {
+  "strict": ["error", "global"],
   //
   // Possible Errors
   //
@@ -39,8 +40,10 @@ const rules = {
   "no-inner-declarations": "error",
   "no-invalid-regexp": "error",
   "no-irregular-whitespace": "error",
+  "no-loss-of-precision": "error",
   "no-misleading-character-class": "error",
   "no-obj-calls": "error",
+  "no-promise-executor-return": "error",
   "no-prototype-builtins": "error",
   "no-regex-spaces": "error",
   "no-setter-return": "error",
@@ -48,8 +51,10 @@ const rules = {
   "no-template-curly-in-string": "warn",
   "no-unexpected-multiline": "error",
   "no-unreachable": "error",
+  "no-unreachable-loop": "error",
   "no-unsafe-finally": "error",
   "no-unsafe-negation": "error",
+  "no-useless-backreference": "error",
   "require-atomic-updates": "error",
   "use-isnan": "error",
   "valid-typeof": ["error", {
@@ -68,6 +73,7 @@ const rules = {
   "consistent-return": "error",
   "curly": ["error", "multi-line"],
   "default-case": "off",
+  "default-case-last": "error",
   "default-param-last": "warn",
   "dot-location": ["error", "property"],
   "dot-notation": "off",
@@ -229,7 +235,7 @@ const rules = {
   }],
   "function-call-argument-newline": ["error", "consistent"],
   "function-paren-newline": ["error", "consistent"],
-  "id-blacklist": "off",
+  "id-denylist": "off",
   "id-length": "off",
   "id-match": "off",
   "implicit-arrow-linebreak": ["error", "beside"],
@@ -325,10 +331,18 @@ const rules = {
     // directives
     { "blankLine": "always", "prev": "directive", "next": "*" },
     { "blankLine": "any", "prev": "directive", "next": "directive" },
-    // exports
+    // Node.js export
     { "blankLine": "always", "prev": "*", "next": "cjs-export" },
     { "blankLine": "always", "prev": "cjs-export", "next": "*" },
     { "blankLine": "any", "prev": "cjs-export", "next": "cjs-export" },
+    // ES import
+    { "blankLine": "always", "prev": "*", "next": "import" },
+    { "blankLine": "always", "prev": "import", "next": "*" },
+    { "blankLine": "any", "prev": "import", "next": "import" },
+    // ES export
+    { "blankLine": "always", "prev": "*", "next": "export" },
+    { "blankLine": "always", "prev": "export", "next": "*" },
+    { "blankLine": "any", "prev": "export", "next": "export" },
   ],
   "prefer-exponentiation-operator": "error",
   "prefer-object-spread": "error",
@@ -387,6 +401,7 @@ const rules = {
   "no-dupe-class-members": "error",
   "no-duplicate-imports": "error",
   "no-new-symbol": "error",
+  "no-restricted-exports": "off",
   "no-restricted-imports": "off", // node alt
   "no-this-before-super": "error",
   "no-useless-computed-key": ["error", {

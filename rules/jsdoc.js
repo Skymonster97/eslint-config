@@ -38,6 +38,7 @@ const rules = {
   "jsdoc/check-indentation": ["warn", {
     "excludeTags": ["example"],
   }],
+  "jsdoc/check-line-alignment": ["error", "never"],
   "jsdoc/check-param-names": "warn",
   "jsdoc/check-property-names": "warn",
   "jsdoc/check-syntax": "warn",
@@ -48,7 +49,7 @@ const rules = {
   "jsdoc/implements-on-classes": "warn",
   "jsdoc/match-description": "off",
   "jsdoc/newline-after-description": ["warn", "never"],
-  "jsdoc/no-bad-blocks": "warn",
+  "jsdoc/no-bad-blocks": "off", // TypeError: Cannot read property 'tags' of undefined
   "jsdoc/no-defaults": "off",
   "jsdoc/no-types": "off",
   "jsdoc/no-undefined-types": "warn",
@@ -70,6 +71,7 @@ const rules = {
   "jsdoc/require-returns-description": "off",
   "jsdoc/require-returns-type": "warn",
   "jsdoc/require-returns": "warn",
+  "jsdoc/require-throws": "off",
   "jsdoc/valid-types": "warn",
 };
 

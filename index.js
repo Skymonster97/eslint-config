@@ -1,52 +1,39 @@
 "use strict";
 
-const plugins = [
-  "array-func",
-  "eslint-comments",
-  "html",
-  "import",
-  "jsdoc",
-  "json",
-  "markdown",
-  "node",
-  "promise",
-  "sonarjs",
-  "unicorn",
-];
+const { generatePaths, resolveParser } = require("./src/util.js");
 
-const paths = plugins
-  .filter(a => {
-    try {
-      require(`eslint-plugin-${a}`);
-      return true;
-    } catch {
-      return false;
-    }
-  })
-  .map(a => `./rules/${a}.js`);
+const optional = generatePaths(name => `./rules/${name}.js`);
 
 module.exports = {
-  "parser": "babel-eslint",
+  "parser": resolveParser(),
   "parserOptions": {
-    "ecmaVersion": 11,
+    "ecmaVersion": 12,
     "sourceType": "script",
   },
   "env": {
     "es6": true,
     "es2017": true,
     "es2020": true,
-  },
-  "rules": {
-    "strict": ["error", "global"],
+    "es2021": true,
   },
   "overrides": [
     {
-      "files": ["*.mjs", "*.mjs.js"],
+      "files": [
+        "**.js",
+        "**.cjs",
+        "**.cjs.js",
+      ],
+      "parserOptions": {
+        "sourceType": "script",
+      },
+    },
+    {
+      "files": [
+        "**.mjs",
+        "**.mjs.js",
+      ],
       "parserOptions": {
         "sourceType": "module",
-      },
-      "rules": {
-        "strict": ["error", "never"],
       },
     },
   ],
@@ -55,6 +42,6 @@ module.exports = {
   ],
   "extends": [
     "./rules/eslint.js",
-    ...paths,
+    ...optional,
   ].map(require.resolve),
 };

@@ -2,7 +2,10 @@
 
 const overrides = [
   {
-    "files": ["*.html", "*.htm"],
+    "files": [
+      "**.html",
+      "**.htm",
+    ],
     "rules": {
       "strict": "off",
       "eol-last": "off",

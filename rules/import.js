@@ -1,45 +1,47 @@
 "use strict";
 
 const rules = {
-  "import/default": "off", // ESM
-  "import/dynamic-import-chunkname": "off", // ESM
-  "import/export": "off", // ESM
-  "import/exports-last": "off", // ESM
-  "import/extensions": "off", // ESM
-  "import/first": "off", // ESM
-  "import/group-exports": "error",
+  "import/default": "error",
+  "import/dynamic-import-chunkname": "off", // webpack
+  "import/export": "error",
+  "import/exports-last": "warn", // test
+  "import/extensions": ["error", "always"], // test
+  "import/first": "error",
+  "import/group-exports": "off", // test
   "import/max-dependencies": "off",
-  "import/named": "off", // ESM
-  "import/namespace": "off", // ESM
-  "import/newline-after-import": "off",
+  "import/named": "error",
+  "import/namespace": "error",
+  "import/newline-after-import": "off", // eslint alt (padding-line-between-statements)
   "import/no-absolute-path": "error",
   "import/no-amd": "error",
-  "import/no-anonymous-default-export": "off", // ESM
+  "import/no-anonymous-default-export": "off",
   "import/no-commonjs": "off",
-  "import/no-cycle": "off", // ESM
-  "import/no-default-export": "off", // ESM
+  "import/no-cycle": "error",
+  "import/no-default-export": "off",
   "import/no-deprecated": "error",
-  "import/no-duplicates": "off", // ESM
+  "import/no-duplicates": "error", // test
   "import/no-dynamic-require": "off",
-  "import/no-extraneous-dependencies": "off", // node alt
+  "import/no-extraneous-dependencies": "error", // node alt (node/no-extraneous-import, node/no-extraneous-require)
   "import/no-internal-modules": "off",
-  "import/no-mutable-exports": "off", // ESM
-  "import/no-named-as-default-member": "off", // ESM
-  "import/no-named-as-default": "off", // ESM
-  "import/no-named-default": "off", // ESM
-  "import/no-named-export": "off", // ESM
-  "import/no-namespace": "off", // ESM
-  "import/no-nodejs-modules": "off", // ESM
-  "import/no-relative-parent-imports": "off", // ESM
-  "import/no-restricted-paths": "off", // ESM
+  "import/no-mutable-exports": "error",
+  "import/no-named-as-default-member": "error",
+  "import/no-named-as-default": "error", // test
+  "import/no-named-default": "warn", // test
+  "import/no-named-export": "off",
+  "import/no-namespace": "off",
+  "import/no-nodejs-modules": "off",
+  "import/no-relative-parent-imports": "off",
+  "import/no-restricted-paths": "off",
   "import/no-self-import": "error",
   "import/no-unassigned-import": "off",
-  "import/no-unresolved": "off", // node alt
-  "import/no-unused-modules": "off", // ESM
+  "import/no-unresolved": ["error", { // node alt (node/no-missing-import, node/no-missing-require)
+    commonjs: true,
+  }],
+  "import/no-unused-modules": "warn",
   "import/no-useless-path-segments": ["error", {
     "commonjs": true,
   }],
-  "import/no-webpack-loader-syntax": "off",
+  "import/no-webpack-loader-syntax": "error",
   "import/order": ["error", {
     "groups": [
       "builtin",
@@ -47,8 +49,8 @@ const rules = {
       "internal",
     ],
   }],
-  "import/prefer-default-export": "off", // ESM
-  "import/unambiguous": "off", // ESM
+  "import/prefer-default-export": "off",
+  "import/unambiguous": "error",
 };
 
 module.exports = {

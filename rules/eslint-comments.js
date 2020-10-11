@@ -9,6 +9,7 @@ const rules = {
   "eslint-comments/no-unused-disable": "warn",
   "eslint-comments/no-unused-enable": "warn",
   "eslint-comments/no-use": "off",
+  "eslint-comments/require-description": "off",
 };
 
 module.exports = {

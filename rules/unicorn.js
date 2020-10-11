@@ -21,6 +21,7 @@ const rules = {
   "unicorn/import-index": ["error", {
     "ignoreImports": true,
   }],
+  "unicorn/import-style": "off",
   "unicorn/new-for-builtins": "error",
   /*     */"no-new-wrappers": "off",
   "unicorn/no-abusive-eslint-disable": "off",
@@ -32,13 +33,18 @@ const rules = {
   "unicorn/no-keyword-prefix": "off",
   "unicorn/no-nested-ternary": "off", // eslint alt
   "unicorn/no-new-buffer": "off", // eslint alt
+  "unicorn/no-null": "off",
+  "unicorn/no-object-as-default-parameter": "error",
   "unicorn/no-process-exit": "off",
+  "unicorn/no-reduce": "off",
   "unicorn/no-unreadable-array-destructuring": "error",
   "unicorn/no-unsafe-regex": "error",
   "unicorn/no-unused-properties": "off",
+  "unicorn/no-useless-undefined": "off",
   "unicorn/no-zero-fractions": "error",
   "unicorn/number-literal-case": "error",
   "unicorn/prefer-add-event-listener": "off",
+  "unicorn/prefer-array-find": "error",
   "unicorn/prefer-dataset": "off",
   "unicorn/prefer-event-key": "off",
   "unicorn/prefer-exponentiation-operator": "off", // Deprecated
@@ -49,6 +55,7 @@ const rules = {
   "unicorn/prefer-node-append": "off",
   "unicorn/prefer-node-remove": "off",
   "unicorn/prefer-number-properties": "error",
+  "unicorn/prefer-optional-catch-binding": "error",
   "unicorn/prefer-query-selector": "off",
   "unicorn/prefer-reflect-apply": "error",
   "unicorn/prefer-replace-all": "error",

@@ -2,19 +2,19 @@
 
 /* eslint-disable no-unused-vars, no-undef */
 
-// @ eslint
+// eslint
 console.log(1);
 
-// @ array-func
+// array-func
 [].concat(...[1, 2, 3])
 
-// @ eslint-comments
+// eslint-comments
 /* eslint-disable-next-line */
 
 // @ import
 require("./file.js");
 
-// @ jsdoc
+// jsdoc
 /**
  * Mytestfunction
  * @example
@@ -30,16 +30,16 @@ function test(a, b, c) {
   return a + b - c;
 }
 
-// @ node
+// node
 require("./nothing.js");
 
-// @ promise
+// promise
 Promise.all(1, 2, 3);
 
-// @ sonarjs
+// sonarjs
 if (!(a === 2)) { /*  */ }
 
-// @ unicorn
+// unicorn
 throw new Error();
 
 /* eslint-enable no-unused-vars, no-undef */
