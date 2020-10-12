@@ -7,9 +7,9 @@
   "author": "Skymonster97",
   "main": "index.js",
   "scripts": {
-    "lint": "npx eslint . --ext .js,.json --ignore-pattern /test/",
-    "lint:fix": "npx eslint . --ext .js,.json --fix --ignore-pattern /test/",
-    "test": "npx eslint ./test --ext .html,.js,.json,.md",
+    "lint": "npx eslint . --ext .js,.json --ignore-pattern test/",
+    "lint:fix": "npx eslint . --ext .js,.json --fix --ignore-pattern test/",
+    "test": "npx eslint test/ --ext .html,.js,.mjs,.json,.md",
     "test:rules": "npx eslint-find-rules -u index.js",
     "update": "npx ncu -u",
     "update:check": "npx ncu"
