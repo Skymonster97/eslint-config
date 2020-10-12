@@ -40,7 +40,7 @@
     }
     ```
 
-  - Plugins (optional)
+  - Plugins (each optional)
 
       ```json
       {
