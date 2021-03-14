@@ -11,7 +11,7 @@ console.log(1);
 // eslint-comments
 /* eslint-disable-next-line */
 
-// @ import
+// import
 require("./file.js");
 
 // jsdoc
@@ -23,7 +23,7 @@ require("./file.js");
  * @param {Number} a - test
  * @param {number} b test
  * @param {number} e - test
- * @param {number} c - test
+ * @param {number} c  - test
  * @returns {strung} - result
  */
 function test(a, b, c) {
