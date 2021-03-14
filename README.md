@@ -1,4 +1,11 @@
-# Setup
+<!-- markdownlint-disable MD041 -->
+## Installation
+
+```cmd
+npm install github:Skymonster97/eslint-config
+```
+
+## Setup
 
 - `.eslintrc` file
 
