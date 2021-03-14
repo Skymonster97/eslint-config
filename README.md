@@ -35,7 +35,7 @@
     ```json
     {
       "devDependencies": {
-        "babel-eslint": "*"
+        "@babel/eslint-parser": "*"
       }
     }
     ```
