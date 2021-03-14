@@ -19,10 +19,10 @@ const generatePaths = path => {
 };
 
 const resolveParser = () => {
-  let parser = "esprima";
+  let parser = "@babel/eslint-parser";
 
-  if (moduleExists("babel-eslint")) {
-    parser = "babel-eslint";
+  if (!moduleExists(parser)) {
+    parser = "esprima";
   }
 
   return parser;
