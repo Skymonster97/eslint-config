@@ -10,6 +10,7 @@ module.exports = {
   "parserOptions": {
     "ecmaVersion": 12,
     "sourceType": "script",
+    "requireConfigFile": false,
   },
   "env": {
     "es6": true,

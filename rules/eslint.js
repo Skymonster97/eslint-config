@@ -54,6 +54,9 @@ const rules = {
   "no-unreachable-loop": "error",
   "no-unsafe-finally": "error",
   "no-unsafe-negation": "error",
+  "no-unsafe-optional-chaining": ["error", {
+    "disallowArithmeticOperators": true,
+  }],
   "no-useless-backreference": "error",
   "require-atomic-updates": "error",
   "use-isnan": "error",
@@ -117,6 +120,7 @@ const rules = {
   "no-new": "error",
   "no-new-func": "warn",
   "no-new-wrappers": "warn",
+  "no-nonoctal-decimal-escape": "warn",
   "no-octal": "error",
   "no-octal-escape": "error",
   "no-param-reassign": "off",
@@ -183,23 +187,6 @@ const rules = {
     "classes": true,
     "variables": true,
   }],
-  //
-  // Node.js and CommonJS
-  //
-  "callback-return": "off", // node dupe
-  "global-require": "off", // node dupe
-  "handle-callback-err": "error", // node dupe
-  "no-buffer-constructor": "error",
-  "no-mixed-requires": ["error", { // node dupe
-    "grouping": true,
-    "allowCall": true,
-  }],
-  "no-new-require": "error", // node dupe
-  "no-path-concat": "error", // node alt
-  "no-process-env": "warn", // node dupe
-  "no-process-exit": "warn", // node dupe
-  "no-restricted-modules": "off", // node alt
-  "no-sync": "warn", // node dupe
   //
   // Stylistic Issues
   //

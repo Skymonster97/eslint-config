@@ -1,13 +1,13 @@
 "use strict";
 
 const rules = {
-  "node/callback-return": "off", // eslint dupe
+  "node/callback-return": "off",
   "node/exports-style": ["error", "module.exports", {
     "allowBatchAssign": false,
   }],
   "node/file-extension-in-import": "off", // import dupe (import/extensions)
   "node/global-require": "off", // eslint dupe
-  "node/handle-callback-err": "off", // eslint dupe
+  "node/handle-callback-err": "error",
   "node/no-callback-literal": "off",
   "node/no-deprecated-api": "error",
   "node/no-exports-assign": "error",
@@ -15,15 +15,17 @@ const rules = {
   "node/no-extraneous-require": "off", // import alt (import/no-extraneous-dependencies)
   "node/no-missing-import": "off", // import alt (import/no-unresolved)
   "node/no-missing-require": "off", // import alt (import/no-unresolved)
-  "node/no-mixed-requires": "off", // eslint dupe
-  "node/no-new-require": "off", // eslint dupe
+  "node/no-mixed-requires": ["error", {
+    "grouping": true,
+    "allowCall": true,
+  }],
+  "node/no-new-require": "error",
   "node/no-path-concat": "error", // eslint alt
-  /* */"no-path-concat": "off",
-  "node/no-process-env": "off", // eslint dupe
-  "node/no-process-exit": "off", // eslint dupe
-  "node/no-restricted-import": "off", // eslint alt
-  "node/no-restricted-require": "off", // eslint alt
-  "node/no-sync": "off", // eslint dupe
+  "node/no-process-env": "warn", // eslint dupe
+  "node/no-process-exit": "warn",
+  "node/no-restricted-import": "off",
+  "node/no-restricted-require": "off",
+  "node/no-sync": "warn",
   "node/no-unpublished-bin": "off",
   "node/no-unpublished-import": "off",
   "node/no-unpublished-require": "off",
