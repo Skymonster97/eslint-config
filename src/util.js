@@ -1,34 +1,26 @@
 "use strict";
 
-const pluginsNames = require("./plugins.js");
-
-const moduleExists = arg => {
+const moduleExists = id => {
   try {
-    require(arg);
+    require(id);
     return true;
   } catch {
     return false;
   }
 };
 
-const generatePaths = path => {
-  return pluginsNames
-    .filter(name => moduleExists(`eslint-plugin-${name}`))
-    .map(path)
-    .filter(moduleExists);
+const generatePaths = (plugins, supplier, prefix) => {
+  return plugins
+    .filter(name => moduleExists(`${prefix ?? ""}${name}`))
+    .map(supplier);
 };
 
-const resolveParser = () => {
-  let parser = "@babel/eslint-parser";
-
-  if (!moduleExists(parser)) {
-    parser = "esprima";
-  }
-
-  return parser;
+const resolveParser = (fallback, prefered = []) => {
+  return prefered.find(moduleExists) ?? fallback;
 };
 
 module.exports = {
+  moduleExists,
   generatePaths,
   resolveParser,
 };

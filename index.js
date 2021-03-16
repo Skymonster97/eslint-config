@@ -2,11 +2,16 @@
 
 const { join } = require("path");
 const { generatePaths, resolveParser } = require("./src/util.js");
+const pluginsNames = require("./src/plugins.js");
 
-const optional = generatePaths(name => join(__dirname, `rules/${name}.js`));
+const optional = generatePaths(
+  pluginsNames,
+  name => join(__dirname, `rules/${name}.js`),
+  "eslint-plugin-",
+);
 
 module.exports = {
-  "parser": resolveParser(),
+  "parser": resolveParser("esprima", ["@babel/eslint-parser"]),
   "parserOptions": {
     "ecmaVersion": 12,
     "sourceType": "script",
