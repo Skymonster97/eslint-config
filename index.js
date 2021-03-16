@@ -24,9 +24,9 @@ module.exports = {
   "overrides": [
     {
       "files": [
-        "**.js",
-        "**.cjs",
-        "**.cjs.js",
+        "**/*.js",
+        "**/*.cjs",
+        "**/*.cjs.js",
       ],
       "parserOptions": {
         "sourceType": "script",
@@ -34,8 +34,8 @@ module.exports = {
     },
     {
       "files": [
-        "**.mjs",
-        "**.mjs.js",
+        "**/*.mjs",
+        "**/*.mjs.js",
       ],
       "parserOptions": {
         "sourceType": "module",

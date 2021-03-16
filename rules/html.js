@@ -3,8 +3,8 @@
 const overrides = [
   {
     "files": [
-      "**.html",
-      "**.htm",
+      "**/*.html",
+      "**/*.htm",
     ],
     "rules": {
       "strict": "off",

@@ -3,11 +3,11 @@
 const overrides = [
   {
     "files": [
-      "**.md",
-      "**.markdown",
-      "**.mmd",
-      "**.mdwn",
-      "**.mdown",
+      "**/*.md",
+      "**/*.markdown",
+      "**/*.mmd",
+      "**/*.mdwn",
+      "**/*.mdown",
     ],
     "rules": {
       "indent": ["error", 2],
