@@ -12,7 +12,7 @@ module.exports = {
     "sourceType": "script",
     "requireConfigFile": false,
     "babelOptions": {
-      "configFile": "./babel.config.json",
+      "configFile": require.resolve("./babel.config.json"),
     },
   },
   "env": {
