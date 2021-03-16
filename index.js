@@ -11,6 +11,9 @@ module.exports = {
     "ecmaVersion": 12,
     "sourceType": "script",
     "requireConfigFile": false,
+    "babelOptions": {
+      "configFile": "./babel.config.json",
+    },
   },
   "env": {
     "es6": true,
