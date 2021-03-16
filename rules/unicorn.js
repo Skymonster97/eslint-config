@@ -52,7 +52,7 @@ const rules = {
   "unicorn/number-literal-case": "error",
   "unicorn/numeric-separators-style": ["warn", {
     "number": {
-      "minimumDigits": 0,
+      "minimumDigits": 5,
       "groupLength": 3,
     },
   }],
