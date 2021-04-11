@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-const { moduleExists } = require('./src/util.js');
+const { moduleExists } = require("./src/util.js");
 
 const plugins = [
   ["@babel/plugin-proposal-class-properties"],
