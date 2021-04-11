@@ -52,6 +52,7 @@ npm install github:Skymonster97/eslint-config
       ```json
       {
         "devDependencies": {
+          "@babel/plugin-proposal-class-properties": "*",
           "eslint-plugin-array-func": "*",
           "eslint-plugin-eslint-comments": "*",
           "eslint-plugin-html": "*",
