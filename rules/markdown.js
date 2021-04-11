@@ -2,6 +2,7 @@
 
 const overrides = [
   {
+    "processor": "markdown/markdown",
     "files": [
       "**/*.md",
       "**/*.markdown",
