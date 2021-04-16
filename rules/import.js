@@ -35,7 +35,7 @@ const rules = {
   "import/no-self-import": "error",
   "import/no-unassigned-import": "off",
   "import/no-unresolved": ["error", { // node alt (node/no-missing-import, node/no-missing-require)
-    commonjs: true,
+    "commonjs": true,
   }],
   "import/no-unused-modules": "warn",
   "import/no-useless-path-segments": ["error", {
