@@ -313,7 +313,7 @@ const rules = {
   "one-var-declaration-per-line": ["error", "initializations"],
   "operator-assignment": ["error", "always"],
   "operator-linebreak": ["error", "before"],
-  "padded-blocks": ["error", "never"],
+  "padded-blocks": ["warn", "never"],
   "padding-line-between-statements": ["error",
     // directives
     { "blankLine": "always", "prev": "directive", "next": "*" },
