@@ -1,6 +1,10 @@
 "use strict";
 
-module.exports = [
+module.exports.ESM = [
+  "import",
+];
+
+module.exports.CJS = [
   "array-func",
   "eslint-comments",
   "html",

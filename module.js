@@ -5,7 +5,7 @@ const { generatePaths } = require("./src/util.js");
 const pluginsNames = require("./src/plugins.js");
 
 const optional = generatePaths(
-  pluginsNames,
+  pluginsNames.ESM,
   name => join(__dirname, `rules/esm/${name}.js`),
   "eslint-plugin-",
 );

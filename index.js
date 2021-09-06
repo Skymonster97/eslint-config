@@ -5,7 +5,7 @@ const { generatePaths, resolveParser } = require("./src/util.js");
 const pluginsNames = require("./src/plugins.js");
 
 const optional = generatePaths(
-  pluginsNames,
+  pluginsNames.CJS,
   name => join(__dirname, `rules/${name}.js`),
   "eslint-plugin-",
 );
