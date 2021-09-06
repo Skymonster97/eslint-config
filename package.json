@@ -1,6 +1,6 @@
 {
   "name": "@skymonster97/eslint-config",
-  "version": "0.0.3-dev",
+  "version": "0.0.4-dev",
   "private": true,
   "description": "ESLint configuration package",
   "license": "UNLICENSED",
