@@ -10,7 +10,9 @@ const rules = {
   "import/group-exports": "off", // test
   "import/max-dependencies": "off",
   "import/named": "error",
-  "import/namespace": "error",
+  "import/namespace": ["error", {
+    "allowComputed": true,
+  }],
   "import/newline-after-import": "off", // eslint alt (padding-line-between-statements)
   "import/no-absolute-path": "error",
   "import/no-amd": "error",
