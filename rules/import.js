@@ -52,7 +52,7 @@ const rules = {
     ],
   }],
   "import/prefer-default-export": "off",
-  "import/unambiguous": "error",
+  "import/unambiguous": "off",
 };
 
 module.exports = {
