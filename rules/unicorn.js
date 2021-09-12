@@ -82,7 +82,7 @@ const rules = {
   "unicorn/prefer-spread": "off",
   "unicorn/prefer-string-starts-ends-with": "error",
   "unicorn/prefer-string-slice": "error",
-  "unicorn/prefer-ternary": ["warn", "only-single-line"],
+  "unicorn/prefer-ternary": "off",
   "unicorn/prefer-dom-node-text-conten": "off",
   "unicorn/prefer-string-trim-start-end": "error",
   "unicorn/prefer-type-error": "off",
