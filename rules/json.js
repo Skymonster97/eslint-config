@@ -1,8 +1,8 @@
 "use strict";
 
 const rules = {
-  "json/*": "error",
-  "json/json": "error",
+  "json/*": "off",
+  "json/json": "off",
   //
   "json/undefined": "error",
   "json/enum-value-mismatch": "error",
@@ -35,6 +35,21 @@ const overrides = [
     ],
     "rules": {
       "json/json": ["error", "allowComments"],
+    },
+  },
+  {
+    "files": [
+      "**/*.json",
+    ],
+    "rules": {
+      "array-bracket-newline": "off",
+      "comma-dangle": ["error", "never"],
+      "eol-last": ["warn", "never"],
+      "indent": ["warn", 2],
+      "max-len": "off",
+      "quotes": ["error", "double"],
+      "quote-props": ["error", "always"],
+      "semi": ["error", "never"],
     },
   },
 ];
