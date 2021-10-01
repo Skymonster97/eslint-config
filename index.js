@@ -37,15 +37,6 @@ module.exports = {
         "sourceType": "script",
       },
     },
-    {
-      "files": [
-        "**/*.mjs",
-        "**/*.mjs.js",
-      ],
-      "parserOptions": {
-        "sourceType": "module",
-      },
-    },
   ],
   "ignorePatterns": [
     "node_modules/",

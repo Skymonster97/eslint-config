@@ -14,6 +14,18 @@ module.exports = {
   "parserOptions": {
     "sourceType": "module",
   },
+  "overrides": [
+    {
+      "files": [
+        "**/*.js",
+        "**/*.mjs",
+        "**/*.mjs.js",
+      ],
+      "parserOptions": {
+        "sourceType": "module",
+      },
+    },
+  ],
   "extends": [
     "./index.js",
     ...optional,
