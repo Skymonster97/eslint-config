@@ -1,6 +1,6 @@
 {
   "name": "@skymonster97/eslint-config",
-  "version": "0.0.4-dev",
+  "version": "0.0.5-dev",
   "private": true,
   "description": "ESLint configuration package",
   "license": "UNLICENSED",
@@ -35,23 +35,22 @@
     "npm-check-updates": "^11.3.0"
   },
   "peerDependencies": {
-    "@babel/eslint-parser": "^7.13.14",
-    "@babel/plugin-proposal-class-properties": "^7.13.0",
-    "eslint": "^7.24.0"
+    "@babel/eslint-parser": "*",
+    "@babel/plugin-proposal-class-properties": "*",
+    "eslint": "*"
   },
   "optionalDependencies": {
-    "eslint-plugin-array-func": "^3.1.7",
-    "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-html": "^6.1.2",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsdoc": "^32.2.0",
-    "eslint-plugin-json": "^2.1.2",
-    "eslint-plugin-json-files": "^0.8.1",
-    "eslint-plugin-markdown": "^2.0.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.3.1",
-    "eslint-plugin-sonarjs": "^0.6.0",
-    "eslint-plugin-unicorn": "^28.0.2"
+    "eslint-plugin-array-func": "*",
+    "eslint-plugin-eslint-comments": "*",
+    "eslint-plugin-html": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-jsdoc": "*",
+    "eslint-plugin-json": "*",
+    "eslint-plugin-markdown": "*",
+    "eslint-plugin-node": "*",
+    "eslint-plugin-promise": "*",
+    "eslint-plugin-sonarjs": "*",
+    "eslint-plugin-unicorn": "*"
   },
   "engines": {
     "node": ">=10.4.0"
