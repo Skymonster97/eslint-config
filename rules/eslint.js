@@ -330,6 +330,8 @@ const rules = {
     { "blankLine": "always", "prev": "*", "next": "export" },
     { "blankLine": "always", "prev": "export", "next": "*" },
     { "blankLine": "any", "prev": "export", "next": "export" },
+    // switch
+    { "blankLine": "any", "prev": "switch", "next": "case" },
   ],
   "prefer-exponentiation-operator": "error",
   "prefer-object-spread": "error",
